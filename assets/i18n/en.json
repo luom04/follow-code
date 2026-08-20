@@ -1,0 +1,12 @@
+{
+  "themsanpham": "Add product",
+  "loading": "Loading...",
+  "sanpham": "Products",
+  "load_more": "Load more {{remain}} items",
+  "product_selected": "Product already selected",
+  "same_type_only": "Only same type products allowed",
+  "same_category_only": "Only same category allowed",
+  "max_3_products": "Maximum 3 products",
+  "max_compare": "Compare up to 3 products only",
+  "select_at_least_2": "Please select at least 2 products"
+}

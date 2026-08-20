@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'SVN-Poppins';
+    src: url('SVN-PoppinsLight.eot');
+    src: url('SVN-PoppinsLight.eot?#iefix') format('embedded-opentype'),
+        url('SVN-PoppinsLight.woff2') format('woff2'),
+        url('SVN-PoppinsLight.woff') format('woff'),
+        url('SVN-PoppinsLight.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Poppins';
+    src: url('SVN-PoppinsBold.eot');
+    src: url('SVN-PoppinsBold.eot?#iefix') format('embedded-opentype'),
+        url('SVN-PoppinsBold.woff2') format('woff2'),
+        url('SVN-PoppinsBold.woff') format('woff'),
+        url('SVN-PoppinsBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'UntitledTTF';
+    src: url('UntitledTTF.eot');
+    src: url('UntitledTTF.eot?#iefix') format('embedded-opentype'),
+        url('UntitledTTF.woff2') format('woff2'),
+        url('UntitledTTF.woff') format('woff'),
+        url('UntitledTTF.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Poppins';
+    src: url('SVN-PoppinsMedium.eot');
+    src: url('SVN-PoppinsMedium.eot?#iefix') format('embedded-opentype'),
+        url('SVN-PoppinsMedium.woff2') format('woff2'),
+        url('SVN-PoppinsMedium.woff') format('woff'),
+        url('SVN-PoppinsMedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Poppins';
+    src: url('SVN-PoppinsSemiBold.eot');
+    src: url('SVN-PoppinsSemiBold.eot?#iefix') format('embedded-opentype'),
+        url('SVN-PoppinsSemiBold.woff2') format('woff2'),
+        url('SVN-PoppinsSemiBold.woff') format('woff'),
+        url('SVN-PoppinsSemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SVN-Poppins';
+    src: url('SVN-Poppins.eot');
+    src: url('SVN-Poppins.eot?#iefix') format('embedded-opentype'),
+        url('SVN-Poppins.woff2') format('woff2'),
+        url('SVN-Poppins.woff') format('woff'),
+        url('SVN-Poppins.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

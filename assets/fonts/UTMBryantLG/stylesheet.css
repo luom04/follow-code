@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'UTM BryantLG';
+    src: url('UTMBryantLG.eot');
+    src: url('UTMBryantLG.eot?#iefix') format('embedded-opentype'),
+        url('UTMBryantLG.woff2') format('woff2'),
+        url('UTMBryantLG.woff') format('woff'),
+        url('UTMBryantLG.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'UTM BryantLG';
+    src: url('UTMBryantLGBold.eot');
+    src: url('UTMBryantLGBold.eot?#iefix') format('embedded-opentype'),
+        url('UTMBryantLGBold.woff2') format('woff2'),
+        url('UTMBryantLGBold.woff') format('woff'),
+        url('UTMBryantLGBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}

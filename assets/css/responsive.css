@@ -1,0 +1,574 @@
+/* Min-width */
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+
+    .container,
+    .container-sm {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .category-lists .col-xl-2 {
+        width: 14.28%;
+    }
+
+    .category-lists span {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1215px;
+    }
+}
+
+
+/* Max-width */
+@media (max-width: 1299.98px) {
+    .header-bottom .header-ul .line {
+        margin: 0px 5px;
+    }
+
+    .search-wrapper.active {
+        width: 200px;
+    }
+}
+
+@media (max-width: 1199.98px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-bar-res {
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .header-bottom .logo {max-width:200px ;}
+    .menu-wrapper:before {
+        display: none;
+    }
+
+    .header-nav {
+        padding: 5px 0;
+    }
+
+    .menu-wrapper {
+        width: auto;
+    }
+
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        vertical-align: top;
+    }
+
+    .header-top {
+        text-align: right;
+    }
+
+    .header-top marquee {
+        width: calc(100% - 150px);
+        margin-right: 0px;
+    }
+
+    .slideshow {
+        width: 100%;
+    }
+
+    .footer-title {
+        margin-bottom: 0px;
+    }
+
+    .visao-item {
+        margin: 0px 0px 20px 0px !important;
+        max-width: 100%;
+    }
+
+    #product-title {
+        width: 100%;
+        -webkit-line-clamp: 3;
+    }
+
+    .left-pro-detail {
+        width: 400px;
+    }
+
+    .right-pro-detail {
+        width: calc(100% - 415px);
+        padding: 0px;
+    }
+
+    .camket-pro-detail {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767.98px) {
+    div#header {
+        z-index: 1000;
+        min-height: 46px;
+    }
+
+    .search-wrapper .btn {
+        border-radius: 0;
+        width: 36px;
+    }
+
+    .header-top marquee {
+        width: calc(100%);
+    }
+
+    .search-wrapper.active {
+        width: 100%;
+        position: relative;
+    }
+
+    .slideshow .slider {
+        width: 100%;
+    }
+
+    .title-main {
+        margin-bottom: 15px;
+    }
+
+    .wrap-cauhoi {
+        background: none;
+    }
+
+    .wrap-cauhoi .accordion {
+        max-width: 100%;
+    }
+
+    .doitac-item {
+        padding: 10px;
+    }
+
+    .wrap-newsletter .hotline {
+        min-height: 135px;
+        padding-left: 120px;
+    }
+
+    .wrap-newsletter .hotline span {
+        font-size: 20px;
+        padding-bottom: 10px;
+    }
+
+    .wrap-newsletter .hotline a {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    .footer {
+        padding-bottom: 50px;
+    }
+
+    .footer-ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer-ul li.line {
+        display: none;
+    }
+
+    .footer-ul li {
+        width: 50%;
+    }
+
+    .wrap-product-list .slider-products,
+    .wrap-product-list .slider-product-thumbs {
+        width: 100%;
+    }
+
+    .wrap-product-list .slider-product-thumbs {
+        margin-bottom: 30px;
+    }
+
+    .product-item .image,
+    .product-item .info {
+        width: 100%;
+    }
+
+    .footer-statistic,
+    .footer-copyright {
+        text-align: center;
+    }
+
+    .vanhoa-item {
+        max-width: 100%;
+    }
+
+    #chuyenkhoaTabs .nav-item {
+        width: 49.5%;
+        margin-bottom: 3px;
+    }
+
+    #chuyenkhoaTabs .nav-link {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #chuyenkhoaTabs .nav-link img {
+        width: 20px;
+    }
+
+    .giatri-item .info {
+        min-height: auto;
+    }
+
+    .news-item .name {
+        min-height: auto;
+    }
+
+    .news-item .line {
+        margin-top: 0px;
+    }
+
+    .wrap-history {
+        background: #f8f8f8;
+    }
+
+    .wrap-history .slider-nav,
+    .wrap-history .slider-for {
+        width: 100%;
+    }
+
+    /* .year-item.slick-current span {
+        padding-left: 20px;
+    } */
+
+    /* .year-item.slick-current::before {
+        right: auto;
+        left: 0px;
+    } */
+
+    .attr-pro-detail,
+    .camket-pro-detail {
+        width: 100%;
+    }
+
+    .left-pro-detail {
+        margin: 0px auto;
+    }
+
+    .left-pro-detail {
+        width: 100%;
+    }
+
+    .right-pro-detail {
+        width: 100%;
+        ;
+    }
+
+    .menu-wrapper .menu-toggle {
+        width: 54px;
+    }
+
+    .menu-header {
+        padding: 10px;
+    }
+
+    .menu-header .btn-close-menu {
+        border: 1px solid #e0e0e0;
+        color: #333;
+        line-height: 21px;
+        padding: 7px 5px 7px 0;
+        position: relative;
+        text-align: right;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: #6e6e6e;
+    }
+
+    .menu-header .btn-close-menu::before,
+    .menu-header .btn-close-menu::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        top: 4px;
+        left: 8px;
+        background-color: #fff;
+        height: 8px;
+    }
+
+    .menu-header .btn-close-menu::before {
+        transform: rotate(45deg);
+    }
+
+    .menu-header .btn-close-menu::after {
+        transform: rotate(-45deg);
+    }
+
+    .menu-dropdown {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        left: auto;
+        width: 100vw;
+        /* toàn bộ chiều ngang */
+        height: 100vh;
+        max-height: 100vh;
+        overflow-y: auto;
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease;
+    }
+
+    .menu-dropdown.open {
+        display: block !important;
+        right: 0;
+        z-index: 1002;
+    }
+
+    .menu-left {
+        width: 100px;
+        /* height: calc(100vh - 49px); */
+        border-right: 0px;
+    }
+
+    .menu-right {
+        padding: 10px;
+        background: #fff;
+    }
+
+    .menu-panel .category-item {
+        width: calc(100% / 3);
+        padding: 0px;
+    }
+
+    #thuong-hieu .category-item {
+        width: calc(100% / 3 - 6px);
+        padding: 0px;
+    }
+
+    .search-wrapper {
+        height: 36px;
+        border-radius: 5px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .menu-left li {
+        padding: 7px 5px;
+    }
+
+    .gird-images {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 238px);
+        grid-gap: 5px 5px;
+    }
+
+    .box-images:nth-child(1) {
+        grid-column: 1 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .gradient-title {
+        width: 300PX;
+    }
+
+    .cart .text-start {
+        display: NONE;
+    }
+
+    .wrap-uudai {
+        padding-top: 1rem;
+        transform: translateY(0);
+    }
+
+    .wrap-counter .num {
+        display: none
+    }
+
+    .banner h2 {
+        font-size: 20px;
+    }
+
+    .btn-submain {
+        font-size: 14px;
+    }
+
+    header#header.fixed {
+        position: relative;
+    }
+
+    .title-main h2 {
+        font-size: 22px;
+    }
+
+    .title-main::before {
+        font-size: 5rem;
+        line-height: 65px;
+    }
+
+    .wrap-diadiem-hot .service-list h2.name {
+        font-size: 16px;
+    }
+
+    .wrap-counter .num {
+        font-size: 4.5rem;
+    }
+
+    .wrap-counter .counter {
+        font-size: 2.5rem;
+    }
+
+    .wrap-service-list .service-list .name {
+        font-size: 17px;
+    }
+
+    .wrap-service-list .service-list .info h3 {
+        font-size: 16px;
+    }
+
+    .wrap-service-list .service-list .info .line {
+        margin: 5px auto;
+    }
+
+    .news-item .name a {
+        height: 42px;
+    }
+
+    .news-item .desc {
+        font-size: 13px;
+    }
+
+    .service-item .name {
+        font-size: 18px;
+    }
+
+    .service-item .desc {
+        font-size: 14px;
+    }
+
+    .item_history .name {
+        font-size: 1.5rem;
+    }
+
+    .item_year {
+        font-size: 17px;
+    }
+
+    #frm-newsletter {
+        padding: 0px;
+    }
+
+    .notify-popup {
+        bottom: 85px;
+    }
+
+    .news-item.list .image {
+        width: 120px;
+    }
+
+    .news-item.list .info {
+        width: calc(100% - 120px);
+        padding: 0px 10px;
+    }
+
+    .title-main h2,
+    .title-main h3,
+    .title-main h4 {
+        white-space: normal !important;
+    }
+
+    .choose-list button {
+        font-size: 16px;
+        margin-bottom: 5px;
+        padding: 7px 15px 4px;
+    }
+
+    .left-pro-detail {
+        width: 100%;
+    }
+
+    .khachhang-item {
+        width: 300px;
+    }
+
+    .accordion-button {
+        font-size: 16px;
+    }
+
+    .footer-payments {
+        text-align: center;
+    }
+
+    .item_history .desc {
+        margin-bottom: 0px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: normal;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+    }
+
+    .category-item {
+        padding: 5px;
+        width: calc(100% / 3);
+    }
+
+    .wrap-brand .brand-item,
+    .wrap-doitac .brand-item {
+        width: calc(100% / 3 - .5rem);
+    }
+
+    .filter-brand .filter-dropdown-item {
+        width: calc(100% / 3 - .5rem);
+    }
+
+    .cart-fixed {
+        bottom: 100px;
+    }
+
+    .wrap-about .about-img {
+        position: relative;
+        text-align: left;
+        padding-bottom: 20%;
+    }
+
+    .wrap-about .about-img img:nth-child(2) {
+        margin-left: 0px;
+        margin-top: 0px;
+        position: absolute;
+        right: 0px;
+        top: 15%;
+    }
+
+    .gallery-pro-detail .gallery-pro-detail-left {
+        width: 100%;
+        margin: 0px;
+        order: -1;
+    }
+
+    .gallery-pro-detail .slider-product-thumbs {
+        width: calc(100% - 85px);
+    }
+
+    .gallery-pro-detail .slider-products {
+        width: 100%;
+    }
+}
+
+@media (max-width: 380.98px) {
+    .product-video {
+        width: 60px;
+        height: 60px;
+    }
+}

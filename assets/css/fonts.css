@@ -1,0 +1,87 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&display=swap'); */
+/* 
+
+font-family: "Montserrat", sans-serif;
+font-family: "Manrope", sans-serif;
+font-family: "Open Sans", sans-serif;
+font-family: "Noto Sans", sans-serif;
+font-family: "Roboto", sans-serif;
+font-family: "Inter", sans-serif;
+font-family: "Lato", sans-serif;
+font-family: "Oswald", sans-serif;
+font-family: "Raleway", sans-serif;
+font-family: "Nunito", sans-serif;
+font-family: "Quicksand", sans-serif;
+font-family: "Lexend", sans-serif;
+
+*/
+/* name form */
+.font-lexend { font-family: "Lexend", sans-serif;}
+
+
+/* Font size */
+.fs-9 {font-size: 9px !important; ;}
+.fs-10 {font-size: 10px !important; ;}
+.fs-11 {font-size: 11px !important; ;}
+.fs-12 {font-size: 12px !important; ;}
+.fs-13 {font-size: 13px !important; ;}
+.fs-14 { font-size: clamp(13px,2vw,14px)!important;}
+.fs-15 {font-size: clamp(14px,2vw,15px)!important;}
+.fs-16 {font-size: clamp(15px,2vw,16px)!important;}
+.fs-17 { font-size: clamp(16px,2vw,17px)!important;}
+.fs-18 {font-size: clamp(15px,2vw,18px)!important;}
+.fs-19 {font-size: clamp(15px,2vw,19px)!important;}
+.fs-20 {font-size: clamp(18px,2vw,20px)!important;}
+.fs-21 {font-size: clamp(19px,2vw,21px)!important;}
+.fs-22 {font-size: clamp(20px,2vw,22px)!important;}
+.fs-23 {font-size: clamp(18px, 2vw, 23px); line-height: clamp(22px, 3vw, 28px);}
+.fs-24 {font-size: clamp(18px, 2vw, 24px); line-height: clamp(22px, 3vw, 30px);}
+.fs-25 {font-size: clamp(20px, 2vw, 25px); line-height: clamp(24px, 3vw, 32px);}
+.fs-26 { font-size: clamp(20px, 2vw, 26px); line-height: clamp(24px, 3vw, 32px);}
+.fs-27 { font-size: clamp(20px, 2vw, 27px); line-height: clamp(24px, 3vw, 32px);}
+.fs-28 { font-size: clamp(20px, 2vw, 28px); line-height: clamp(24px, 3vw, 32px);}
+.fs-29 { font-size: clamp(20px, 2vw, 29px); line-height: clamp(24px, 3vw, 32px);}
+.fs-30 { font-size: clamp(24px, 3vw, 30px);line-height: clamp(27px, 4vw, 40px);}
+.fs-31 { font-size: clamp(25px, 3vw, 31px);line-height: clamp(35px, 4vw, 45px);}
+.fs-32 { font-size: clamp(20px, 3vw, 32px); line-height: clamp(30px,4vw,47px);}
+.fs-33 { font-size: clamp(20px, 3vw, 33px); line-height: clamp(30px,4vw,47px);}
+.fs-34 { font-size: clamp(20px, 3vw, 34px); line-height: clamp(30px,4vw,47px);}
+.fs-35 { font-size: clamp(25px, 3vw, 35px); line-height: clamp(35px,4vw,50px);}
+.fs-36 { font-size: clamp(25px, 3vw, 36px); line-height: clamp(35px,4vw,50px);}
+.fs-37 { font-size: clamp(25px, 3vw, 37px); line-height: clamp(35px,4vw,50px);}
+.fs-38 { font-size: clamp(25px, 3vw, 38px); line-height: clamp(35px,4vw,50px);}
+.fs-39 { font-size: clamp(25px, 3vw, 39px); line-height: clamp(35px,4vw,50px);}
+.fs-40 { font-size: clamp(30px, 4vw, 40px); line-height: clamp(40px,5vw,60px);}
+.fs-41 { font-size: clamp(30px, 4vw, 41px); line-height: clamp(40px,5vw,60px);}
+.fs-42 { font-size: clamp(30px, 4vw, 42px); line-height: clamp(40px,5vw,60px);}
+.fs-43 { font-size: clamp(30px, 4vw, 43px); line-height: clamp(40px,5vw,60px);}
+.fs-44 { font-size: clamp(30px, 4vw, 44px); line-height: clamp(40px,5vw,60px);}
+.fs-45 { font-size: clamp(30px, 4vw, 45px); line-height: clamp(40px,5vw,60px);}
+.fs-46 { font-size: clamp(30px, 4vw, 46px); line-height: clamp(40px,5vw,60px);}
+.fs-47 { font-size: clamp(30px, 4vw, 47px); line-height: clamp(40px,5vw,60px);}
+.fs-48 { font-size: clamp(30px, 4vw, 48px); line-height: clamp(40px,5vw,60px);}
+.fs-49 { font-size: clamp(30px, 4vw, 49px); line-height: clamp(40px,5vw,60px);}
+.fs-50 { font-size: clamp(30px, 4vw, 50px); line-height: clamp(40px,5vw,60px);}
+.fs-51 { font-size: clamp(30px, 4vw, 51px); line-height: clamp(40px,5vw,60px);}
+.text-right { text-align: right ;}
+.text-sm {font-size: .775rem !important ;}
+.text-md {font-size: .9rem !important;}
+.text-lg {font-size: 1.2rem !important;}
+.text-xl {font-size: 1.5rem !important;}
+/* Font weight */
+.fw-500 { font-weight: 500;}
+.fw-600 { font-weight: 600;}
+.fw-700 { font-weight: 700;}
+.fw-800 { font-weight: 800;}
+.fw-black { font-weight: 900;}
+
+/* Color text */
+.text-red { color: var(--color-red); }
+.text-yellow { color: var(--color-yellow); }
+.text-blue { color: var(--color-blue); }
+.text-green { color: var(--color-green); }
+.text-black {color: var(--color-black) !important;}
+.text-main { color: var(--color-main) !important;}
+.text-gray { color: var(--color-gray);}
+
+

@@ -1,0 +1,1 @@
+{"type":"header-slidebar","color":"white","color_main":"white"}

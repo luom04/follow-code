@@ -1,0 +1,12 @@
+@font-face {
+    font-family: '1FTV VIP Rostack';
+    src: url('1FTVVIPRostack.eot');
+    src: url('1FTVVIPRostack.eot?#iefix') format('embedded-opentype'),
+        url('1FTVVIPRostack.woff2') format('woff2'),
+        url('1FTVVIPRostack.woff') format('woff'),
+        url('1FTVVIPRostack.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

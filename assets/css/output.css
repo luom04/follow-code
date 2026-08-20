@@ -1,0 +1,75 @@
+.search-wrapper { width: 40px; height: 40px; border-radius: 50px; /* background: #f2f2f2; */
+    display: flex; align-items: center; justify-content: end; outline: none; overflow: hidden; transition: 400ms ease-in-out; } 
+   
+   .search-wrapper.active { width: 350px; z-index: 9999; } 
+   
+   .search-wrapper.active input { display: block; } 
+   
+   .search-wrapper.active .btn svg { color: #c4c4c4; } 
+   
+   .search-wrapper.active .btn-close { display: block; } 
+   
+   .search-wrapper input { position: absolute; top: 0; left: 0; width: calc(100% - 36px); height: 100%; outline: none !important; border: 0px !important; font-size: 1rem; display: none; z-index: 1; background: #f2f2f2 !important; box-shadow: none !important; padding-left: 15px; } 
+   
+   .search-wrapper .btn {position: relative;display: flex;align-items: center;justify-content: center;padding: 0px;border-radius: 5px;width: 30px;height: 36px;cursor: pointer;background: transparent;border-color: transparent;z-index: 2;} 
+   
+   .search-wrapper .btn svg { color: #333; } 
+   
+   .search-wrapper .btn-close { font-size: 20px; background: transparent; display: none}
+   
+   #search-result { position: absolute; right: 0px; top: 100%; width: 100%; min-width: 350px; background: #fff; border-radius: 5px; overflow: hidden; display: none; } 
+   
+   #search-result.show { display: block; } 
+   
+   #search-result ul { list-style: none; margin: 0px; padding: 0px; } 
+   
+   #search-result ul li { display: block !important; } 
+   
+   #search-result ul li:hover { background: #f1f1f1; } 
+   
+   #search-result .image { width: 50px; } 
+   
+   #search-result .info { width: calc(100% - 60px); } 
+   
+   #search-result .name { font-size: 15px; margin-bottom: 0px; } 
+   
+   #search-result .price { font-size: 14px; } 
+   
+   #search-result .price-new { font-size: 15px; } 
+   
+   .bottom-4 { bottom: 1rem; } 
+   
+   .left-0 { left: 0px; } 
+   
+   .left-1\/2 { left: 50%; } 
+   
+   .left-4 { left: 1rem; } 
+   
+   .right-0 { right: 0px; } 
+   
+   .right-2 { right: 0.5rem; } 
+   
+   .start-1 { inset-inline-start: 0.25rem; } 
+   
+   .top-0 { top: 0px !important; } 
+   
+   .top-1\/2 { top: 50%; } 
+   
+   .top-2 { top: 0.5rem; } 
+   
+   .z-10 { z-index: 10; } 
+   
+   .z-50 { z-index: 50; } 
+   
+   .order-1 { order: 1; } 
+   
+   .order-2 { order: 2; } 
+   
+   .col-auto { grid-column: auto; } 
+   
+   .absolute { position: absolute; } 
+   
+   .h-10 { height: 40px; } 
+   
+   .w-10 {width: 26px;} 
+   

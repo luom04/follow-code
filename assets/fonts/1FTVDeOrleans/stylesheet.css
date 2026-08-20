@@ -1,0 +1,12 @@
+@font-face {
+    font-family: '1FTV De Orleans';
+    src: url('1FTVDeOrleans.eot');
+    src: url('1FTVDeOrleans.eot?#iefix') format('embedded-opentype'),
+        url('1FTVDeOrleans.woff2') format('woff2'),
+        url('1FTVDeOrleans.woff') format('woff'),
+        url('1FTVDeOrleans.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'MTD Adventures Unlimited Script';
+    src: url('MTD.woff2') format('woff2'),
+        url('MTD.woff') format('woff'),
+        url('MTD.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+

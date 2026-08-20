@@ -1,0 +1,12 @@
+@font-face {
+    font-family: '1FTV Avilock';
+    src: url('1FTVAvilock-Bold.eot');
+    src: url('1FTVAvilock-Bold.eot?#iefix') format('embedded-opentype'),
+        url('1FTVAvilock-Bold.woff2') format('woff2'),
+        url('1FTVAvilock-Bold.woff') format('woff'),
+        url('1FTVAvilock-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

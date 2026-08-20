@@ -1,0 +1,12 @@
+{
+  "loading": "Đang tải...",
+  "themsanpham": "Thêm sản phẩm",
+  "sanpham": "Sản phẩm",
+  "load_more": "Xem thêm {{remain}} bài viết",
+  "product_selected": "Sản phẩm đã được chọn",
+  "same_type_only": "Chỉ chọn sản phẩm cùng loại",
+  "same_category_only": "Chỉ chọn sản phẩm cùng danh mục",
+  "max_3_products": "Đã đủ 3 sản phẩm",
+  "max_compare": "Chỉ so sánh tối đa 3 sản phẩm",
+  "select_at_least_2": "Vui lòng chọn ít nhất 2 sản phẩm"
+}

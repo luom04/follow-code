@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Benguiat';
+    src: url('Benguiat.eot');
+    src: url('Benguiat.eot?#iefix') format('embedded-opentype'),
+        url('Benguiat.woff2') format('woff2'),
+        url('Benguiat.woff') format('woff'),
+        url('Benguiat.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,205 @@
+ <div class="form-group">
+                    <label for="tokengsc"><span>Google token GSC (Bạn phải có quyền là chủ sở hữu):</span> <a href="<?= @$options['website'] ?>/madmin/api/gsc_auth.php" target="_blank">Tạo token GSC</a></label>
+                    
+                    <textarea class="form-control text-sm" name="data[tokengsc]" id="tokengsc" rows="5" placeholder="Google token GSC"><?= $func->decodeHtmlChars($flash->get('tokengsc')) ?: $func->decodeHtmlChars(@$item['tokengsc']) ?></textarea>
+                </div>
+                  <div class="form-group">
+                    <label for="tokenoauth"><span>Google token oauth (Coppy file json từ Google Console):</span> <a href="https://console.cloud.google.com/auth/clients" target="_blank">Tạo token oauth</a></label>
+                    <textarea class="form-control text-sm" name="data[tokenoauth]" id="tokenoauth" rows="5" placeholder="Google token oauth"><?= $func->decodeHtmlChars($flash->get('tokenoauth')) ?: $func->decodeHtmlChars(@$item['tokenoauth']) ?></textarea>
+                </div>
+
+
+
+
+
+<?php
+$last = $d->rawQueryOne("SELECT ngay FROM #_keyword_rank ORDER BY ngay DESC LIMIT 1");
+$ngay = $last['ngay'] ?? date('Y-m-d');
+$list = $d->rawQuery(" SELECT * FROM #_keyword_rank WHERE ngay=? ORDER BY luothienthi DESC, luotnhap DESC", [$ngay]);
+?>
+<section class="content pb-4 mb-4">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between mb-3 flex-wrap">
+            <h5 class="mb-0 fw-semibold">Thứ hạng từ khóa</h5>
+            <div class="d-flex gap-2 align-items-center flex-wrap">
+                <span class="text-muted small">
+                Dữ liệu cập nhật theo GSC (có thể trễ 1–2 ngày): <b><?=$ngay?></b>
+                </span>
+                <button type="button" class="btn btn-sm btn-primary ml-2" id="btnGscUpdate">
+                    <span class="txt">Cập nhật</span>
+                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+        <div id="gscMsg" class="small mb-2"></div>
+        <div class="table-responsive" style="max-height:260px; overflow:auto;">
+            <table class="table table-hover align-middle mb-0">
+                <thead class="sticky-tops bg-light">
+                <tr>
+                    <th style="width:70px;">STT</th>
+                    <th>Từ khóa</th>
+                    <th class="text-end" style="width:140px;">Lượt nhấp</th>
+                    <th class="text-end" style="width:120px;">Thứ hạng</th>
+                    <th class="text-end" style="width:140px;">Lượt hiển thị</th>
+                    <th style="min-width:320px;">Link top</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php if(!empty($list)): $i=1; foreach($list as $row): ?>
+                    <tr>
+                    <td><?=$i++?></td>
+                    <td><?=htmlspecialchars($row['tukhoa'] ?? '')?></td>
+                    <td class="text-end"><?=number_format((int)$row['luotnhap'])?></td>
+                    <td class="text-end"><?=round((float)$row['thu_hang'], 2)?></td>
+                    <td class="text-end"><?=number_format((int)$row['luothienthi'])?></td>
+                    <td>
+                        <?php if(!empty($row['linktop'])): ?>
+                        <a href="<?=htmlspecialchars($row['linktop'])?>" target="_blank" rel="noopener">
+                            <?=htmlspecialchars($row['linktop'])?>
+                        </a>
+                        <?php endif; ?>
+                    </td>
+                    </tr>
+                <?php endforeach; else: ?>
+                    <tr><td colspan="6" class="text-center text-muted py-4">Chưa có dữ liệu</td></tr>
+                <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+
+<script>
+(function(){
+  const btn = document.getElementById('btnGscUpdate');
+  const msg = document.getElementById('gscMsg');
+  if(!btn) return;
+
+  const txt = btn.querySelector('.txt') || btn;
+  const spn = btn.querySelector('.spinner-border');
+  let timer = null;
+
+  function setLoading(isLoading){
+    btn.disabled = isLoading;
+    if(spn) spn.classList.toggle('d-none', !isLoading);
+    if(isLoading) txt.textContent = 'Đang cập nhật...';
+  }
+
+  function setCountdown(seconds){
+    clearInterval(timer);
+
+    if(seconds <= 0){
+      btn.disabled = false;
+      txt.textContent = 'Cập nhật';
+      return;
+    }
+
+    btn.disabled = true;
+    const tick = () => {
+      const m = Math.floor(seconds / 60);
+      const s = seconds % 60;
+      txt.textContent = `Đã cập nhật (${m}:${String(s).padStart(2,'0')})`;
+      seconds--;
+      if(seconds < 0){
+        clearInterval(timer);
+        btn.disabled = false;
+        txt.textContent = 'Cập nhật';
+      }
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+  }
+
+  async function loadCooldown(){
+    try{
+      const res = await fetch('/madmin/api/gsc_status.php', {credentials:'same-origin', cache:'no-store'});
+      if(!res.ok) return;
+      const data = await res.json();
+      if(data && typeof data.remain === 'number'){
+        setCountdown(data.remain);
+      }
+    } catch(e){}
+  }
+
+  // Khi vào trang, nếu còn cooldown thì khóa nút luôn
+  loadCooldown();
+
+  btn.addEventListener('click', async () => {
+    setLoading(true);
+    msg.className = "small text-primary mb-2";
+    msg.textContent = "Đang lấy dữ liệu từ Google Search Console...";
+
+    try {
+      const res = await fetch('/madmin/api/gsc_update_now.php', {
+        method: 'GET',
+        credentials: 'same-origin',
+        cache: 'no-store'
+      });
+
+      const text = await res.text();
+      if(!res.ok) throw new Error(text || ('HTTP ' + res.status));
+
+      msg.className = "small text-success mb-2";
+      msg.textContent = text;
+
+      if(spn) spn.classList.add('d-none');
+      setCountdown(300);
+
+      setTimeout(() => location.reload(), 700);
+
+    } catch (e) {
+      msg.className = "small text-danger mb-2";
+      msg.textContent = "Lỗi: " + e.message;
+      if(spn) spn.classList.add('d-none');
+      btn.disabled = false;
+      txt.textContent = 'Cập nhật';
+    }
+  });
+})();
+</script>
+  
+
+
+
+
+<div class="form-group">
+                    <label for="tokengsc"><span>Google token GSC (Bạn phải có quyền là chủ sở hữu):</span> <a href="<?= @$options['website'] ?>/madmin/api/gsc_auth.php" target="_blank">Tạo token GSC</a></label>
+                    
+                    <textarea class="form-control text-sm" name="data[tokengsc]" id="tokengsc" rows="5" placeholder="Google token GSC"><?= $func->decodeHtmlChars($flash->get('tokengsc')) ?: $func->decodeHtmlChars(@$item['tokengsc']) ?></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="tokenoauth"><a href="https://console.cloud.google.com/apis/credentials" target="_blank">Thêm địa chỉ web vào token oauth</a></label>
+                     <?php /*  https://console.cloud.google.com/iam-admin/iam */ ?>
+
+                </div>
+                  <div class="form-group">
+                    <label for="tokenoauth"><span>Google token oauth (Coppy file json từ Google Console):</span> <a href="https://console.cloud.google.com/auth/clients" target="_blank">Tạo token oauth</a></label>
+                    <textarea class="form-control text-sm" name="data[tokenoauth]" id="tokenoauth" rows="5" placeholder="Google token oauth"><?= $func->decodeHtmlChars($flash->get('tokenoauth')) ?: $func->decodeHtmlChars(@$item['tokenoauth']) ?></textarea>
+                </div>
+
+
+
+
+
+CREATE TABLE #_keyword_rank (
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  ngay DATE NOT NULL,
+  tukhoa VARCHAR(255) NOT NULL,
+  luotnhap INT NOT NULL DEFAULT 0,
+  thu_hang INT NOT NULL DEFAULT 0,
+  luothienthi INT NOT NULL DEFAULT 0,
+  linktop VARCHAR(500) DEFAULT NULL,
+  hienthi TINYINT(1) NOT NULL DEFAULT 1,
+  stt INT NOT NULL DEFAULT 0,
+  ngaytao INT NOT NULL DEFAULT 0
+);
+
+
+
+.table-responsive thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #f8f9fa; /* bắt buộc */
+}
